@@ -2,7 +2,7 @@
  * From Leetcode Problem #225. Implement Stack using Queues
  * Link: https://leetcode.com/problems/implement-stack-using-queues/description/
  * Difficulty: Easy
- * Implemented using a single Queue.
+ * Implemented using multiple queues.
  */
 
 let MyStack = function () {
