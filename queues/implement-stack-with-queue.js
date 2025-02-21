@@ -2,12 +2,11 @@
  * From Leetcode Problem #225. Implement Stack using Queues
  * Link: https://leetcode.com/problems/implement-stack-using-queues/description/
  * Difficulty: Easy
- * Implemented using a single Queue.
+ * Implemented using a single queue.
  */
 
 let MyStack = function () {
-  this.mainQueue = [];
-  this.bounceQueue = [];
+  this.queue = [];
 };
 
 /**
@@ -16,25 +15,18 @@ let MyStack = function () {
  * @return {void}
  */
 MyStack.prototype.push = function (x) {
-  this.mainQueue.push(x);
+  this.queue.push(x);
 };
 
 /**
  * @return {number}
  */
 MyStack.prototype.pop = function () {
-  let shiftedValue;
-
-  while (this.mainQueue.length > 0) {
-    shiftedValue = this.mainQueue.shift();
-    if (!this.empty()) this.bounceQueue.push(shiftedValue);
+  for (let i = 0; i < this.queue.length - 1; i++) {
+    this.queue.push(this.queue.shift());
   }
 
-  while (this.bounceQueue.length > 0) {
-    this.mainQueue.push(this.bounceQueue.shift());
-  }
-
-  return shiftedValue;
+  return this.queue.shift();
 };
 
 /**
@@ -43,7 +35,7 @@ MyStack.prototype.pop = function () {
 MyStack.prototype.top = function () {
   let topValue = this.pop();
 
-  this.mainQueue.push(topValue);
+  this.queue.push(topValue);
 
   return topValue;
 };
@@ -52,5 +44,5 @@ MyStack.prototype.top = function () {
  * @return {boolean}
  */
 MyStack.prototype.empty = function () {
-  return this.mainQueue.length === 0;
+  return this.queue.length === 0;
 };
