@@ -1,4 +1,4 @@
-// From Leetcode Problem Implement a Dynamic Array
+// From Neetcode Problem Implement a Dynamic Array
 // Link: https://neetcode.io/problems/dynamicArray
 
 class DynamicArray {
