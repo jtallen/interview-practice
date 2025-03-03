@@ -1,5 +1,6 @@
 // From Neetcode Problem Implement an Insertion Sort
 // Link: https://neetcode.io/problems/insertionSort
+// Difficulty: Easy
 
 class Solution {
   /**

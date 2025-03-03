@@ -1,5 +1,6 @@
 // From Neetcode Problem Implement a Dynamic Array
 // Link: https://neetcode.io/problems/dynamicArray
+// Difficulty: Easy
 
 class DynamicArray {
 

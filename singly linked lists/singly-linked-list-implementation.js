@@ -1,4 +1,4 @@
-// From Leetcode Problem Design a Singly Linked List
+// From Neetcode Problem Design a Singly Linked List
 // Link: https://neetcode.io/problems/singlyLinkedList
 // Difficulty: Easy
 
